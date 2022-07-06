@@ -1,0 +1,30 @@
+Línea 1 y 2: Importamos OpenCV y os.
+
+Línea 4 a 6: Voy a especificar la ruta en donde están las carpetas de las personas que vamos a reconocer, y las listaremos para obtener únicamente sus nombres. Esto lo hago ya que al momento de realizar el reconocimiento facial tomaré de aquí los nombres para que se visualicen. 
+
+Línea 8 a 11: Establezco el método que voy a usar para realizar el reconocimiento facial, puedes descomentar la línea que corresponda a aquel con el que entrenaste el reconocedor.
+
+Línea 13 a 15: Para poder leer el modelo almacenado usaremos read, el nombre del modelo corresponderá al que se almacenó en la sección anterior.
+
+Línea 17 y 18: Tienes dos opciones para poder probar el funcionamiento del reconocedor de caras, en la línea 17 por ejemplo puedes hacerlo a través de un videostreaming, mientras que en la línea 18 a través de la lectura de un video.
+
+Línea 20 a 32: Aquí haremos el mismo procedimiento que en el primer programa capturandoRostros.py, vamos a leer el clasificador de rostros, luego pasamos con la lectura de los fotogramas, transformamos a escala de grises, detectamos los rostros, luego vamos con el análisis de cada uno de los rostros detectados, los recortamos y redimensionamos. Realizamos esto ya que las imágenes con las que entrenamos, como en los nuevos rostros se debe aplicar el mismo proceso.
+
+Línea 33: En esta línea vamos a emplear predict para una nueva imagen llamada rostro que nos permitirá predecir los resultados. Esto lo hemos asignado a result, por lo que en la posición 0 tendremos una etiqueta (0, 1, …) y el valor de confianza, este último será diferente para cada método.
+
+
+Línea 35: Visualizamos los resultados obtenidos en result.
+
+De las líneas 37 a 59, las explicaré luego ya que dependerán de cada método empleado.
+
+Línea 61 a 67: Procedemos a visualizar frame, el proceso se dentendrá cuando se presione ‘Esc’, se terminará con el video y se cerrarán todas las ventanas de visualización
+
+Si descomentamos las líneas 8 y 13 correspondientes al método EigenFaces, vamos a obtener una etiqueta con el rostro más parecido a los entrenados junto con su valor de confianza. Tendremos que realizar algunas pruebas para determinar un umbral para que aparezca el nombre de la persona identificada y para valores mayores a este umbral será considerado como rostro desconocido.
+Una vez que hemos probado el código y hemos experimentado, procederemos a descomentar las líneas 37 a 43.
+
+Línea 38: Comparo el valor de confianza que está en result[1] con 5700, de tal modo que valores menores a este se etiquete con el nombre de la persona y valores mayores a este se etiquete como desconocido. El umbral 5700 que he escogido ha sido a través de prueba y error, por lo que tu debes cambiar este con la experimentación que realices con respecto a tus resultados.
+
+Línea 39 y 40: En la línea 39 vamos a visualizar el nombre de la persona correspondiente al valor de la etiqueta almacenada en result[0], para ello usaremos imagePaths para obtener los nombres. En la línea 40 dibujaremos un rectángulo de color verde alrededor del rostro detectado.
+
+
+
