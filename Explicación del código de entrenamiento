@@ -24,3 +24,7 @@ Línea 27 y 28: Podemos comprobar en número de etiquetas almacenadas, por ejemp
 
 Ahora que tenemos listos nuestros datos (imágenes y etiquetas) en dos arrays es hora de realizar el entrenamiento, podrás escoger de cada uno de las tres técnicas de las cuales te había comentado, vamos a analizar cada una de ellas.
 
+Línea 37: Para entrenar el reconocedor de rostros necesitamos de face_recognizer.train, en donde face_recognizer será la variable donde se asignó el método (cualquierda de las líneas  31, 32 o 33). Dentro de los paréntesis tendremos que especificar el array en donde estén contenidos los rostros o imágenes de entrenamiento, mientras que el segundo parámetro corresponde a las etiquetas. Es necesario que este sea un numpy array por ello he puesto np.array(labels).
+
+Línea 40 a 43: Usaremos write para guardar el modelo. Yo había elegido guardar un modelo por cada método (por separado), por ello usé distintos nombres en las líneas 40 a la 42. En la línea 43 imprimiremos un mensaje de 'Modelo almacenado...'.
+
