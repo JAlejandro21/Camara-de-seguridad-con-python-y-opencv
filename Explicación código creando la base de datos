@@ -1,0 +1,13 @@
+Línea 1 a 3: Importamos OpenCV, os e imutils.
+
+Línea 5 a 7: En estas líneas crearemos una carpeta con el nombre de la persona que se desee reconocer, esta se creará dentro de la carpeta Data que ya había creado previamente de forma manual. Entonces en la línea 5 en personName se asigana el nombre de la persona, en la línea 6 se asigna a dataPath la ubicación del directorio donde se creará cada carpeta con el nombre de cada persona a reconocer. Finalmente, personPath será la ruta completa.
+
+Línea 9 a 11: Con la información de las líneas pasadas, se creará el directorio con el nombre de la persona a reconocer dentro de la carpeta Data. En la línea 5 por ejemplo puedes ver que se creará una carpeta llamada ‘Gaby’, que tendrías que modificar de acuerdo a las personas que quieras identificar.
+
+Línea 13 y 14: En la línea 13 indicamos que vamos a realizar un video en directo, mientras que en la línea 14 leeremos un video. Puedes usar cualquiera de estas dos líneas para poder capturar los rostros.
+
+Línea 23: Estoy redimensionando con imutils.resize (para más información sobre esta función ve a este link), esto lo hago para redimensionar el tamaño de los fotogramas del video de entrada.
+
+Línea 32: Se está redimensionando las imágenes correspondientes a los rostros para que todos posean el mismo tamaño. Yo he elegido 150 pixeles, pero podrías hacerlo con otro valor.
+
+Línea 48: En esta línea he añadido la condición de count >= 300 para que el proceso de almacenamiento termine a los 300 rostros almacenados. 
