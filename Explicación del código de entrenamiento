@@ -1,0 +1,26 @@
+Línea 1 a 3: Importamos OpenCV, os y numpy con un alias np.
+
+Línea 5 a 7: En primer lugar, especificamos la ruta de la carpeta ‘Data’ que habíamos creado manualmente antes y dentro de ella estará cada carpeta con el nombre de las personas que se desee identificar (lo habíamos realizado en el apartado anterior). En la línea 6 listamos todas los nombres de las carpetas almacenadas en ‘Data’. En la línea 7 imprimimos la lista obtenida.
+
+Línea 9: Declaramos labels en este se almacenarán las etiquetas correspondientes a cada imagen según la persona.
+
+Línea 10: Declaramos facesData en donde se almacenará cada una de las imágenes de los rostros.
+
+Línea 11: Estableceremos un contador label en 0, para conforme se termine de leer las imágenes de una persona, cambie a otro valor. Esto ayudará al clasificador a entender que se tarda de diferentes personas.
+
+Línea 13 a 15: Vamos a leer cada una las carpetas dentro de ‘Data’. En personPath establecemos la ruta a la carpeta de cada persona. Mientras que en la línea 15 imprimimos el mensaje 'Leyendo las imágenes...' para que cuando se ejecute podamos saber en qué parte del proceso estamos.
+
+Línea 17 y 18: Aquí leeremos todas las imágenes correspondientes a cada rostro. En la línea 18 estamos imprimiendo el nombre de la carpeta y la imagen.
+
+Línea 19: En labels vamos añadiendo la etiqueta de cada imagen.
+
+Línea 20: En el array facesData añadiremos cada imagen (rostro).
+
+Línea 21 a 23: Si deseamos leer cada imagen (rostro) para verificar que se está realizando bien el proceso, podemos descomentar estas líneas. 
+
+Línea 24: Cada vez que se termine de almacenar los rostros y etiquetas de una carpeta, se incrementará label en 1.
+
+Línea 27 y 28: Podemos comprobar en número de etiquetas almacenadas, por ejemplo, cuantas están en 0, 1, etc. El número que obtengamos debe corresponder con el número de imágenes almacenadas en cada carpeta dentro de ‘Data’.
+
+Ahora que tenemos listos nuestros datos (imágenes y etiquetas) en dos arrays es hora de realizar el entrenamiento, podrás escoger de cada uno de las tres técnicas de las cuales te había comentado, vamos a analizar cada una de ellas.
+
